@@ -8,7 +8,8 @@ function useCurrencyInfo(currency) {
         async function fetchCurrencyInfo() {
             let res = await fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`);
             const data = await res.json();
-            setCurrencyInfo(data);
+            setCurrencyInfo(data.currency);
+            console.log ( "data = ",  data[currency]);
         }
         fetchCurrencyInfo();
     }, [currency]);
