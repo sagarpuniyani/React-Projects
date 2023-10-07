@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
 import './index.css';
+import App from './App';
 
 
 // function MyApp() {
@@ -34,7 +35,9 @@ const ReactElement = React.createElement(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
-    {Anotherreact} , 
+    {Anotherreact} 
     { ReactElement}
+    <App /> 
+    
   </>
 )

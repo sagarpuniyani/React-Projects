@@ -7,4 +7,4 @@ return (
 )
 }
 
-export default MyCom;
+export  {MyCom};

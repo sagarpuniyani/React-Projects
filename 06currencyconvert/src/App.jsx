@@ -6,28 +6,26 @@ import './App.css';
 const BackgroundImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRiRPERUxsIG6E-Jj0ObgySd2lGm_qf549AA'
 function App() {
 
-  const [amount, setAmount] = useState(0)
-  const [from, setFrom] = useState("usd")
-  const [to, setTo] = useState("inr")
-  const [convertedAmount, setConvertedAmount] = useState(0)
+    const [amount, setAmount] = useState(0)
+    const [from, setFrom] = useState("usd")
+    const [to, setTo] = useState("inr")
+    const [convertedAmount, setConvertedAmount] = useState(0)
 
-  const currencyInfo = useCurrencyInfo(from)
-
-  const options = Object.keys(currencyInfo);
+    const currencyInfo = useCurrencyInfo(from)
 
 
-  const swap = () => {
+    const swap = () => {
     setFrom(to)
     setTo(from)
     setConvertedAmount(amount)
     setAmount(convertedAmount)
-  }
-  
-  const convert = () => {
-    setConvertedAmount(amount * currencyInfo[to])
-  }
+    }
+    
+    const convert = () => {
+        setConvertedAmount(amount * currencyInfo[to])
+    }
 
-  return (
+    return (
     <div
     className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
     style={{
@@ -70,7 +68,7 @@ function App() {
         </div>
     </div>
 </div>
-  )
+)
 }
 
 export default App
