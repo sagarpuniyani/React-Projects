@@ -24,4 +24,30 @@ class A {
         System.out.println("Hello, Java!");
     }
 }
-</pre >
+</pre>
+</div>
+<button id="toggle-button">Toggle Code</button>
+
+<script>
+  const codeContainer = document.getElementById("code-container");
+  const code = document.getElementById("code");
+  const toggleButton = document.getElementById("toggle-button");
+  let isJavaCodeVisible = true;
+
+  toggleButton.addEventListener("click", toggleCode);
+
+  function toggleCode() {
+    if (isJavaCodeVisible) {
+      code.textContent = `console.log("Hello, JavaScript!");`;
+      code.setAttribute("lang", "javascript");
+    } else {
+      code.textContent = `class A {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}`;
+      code.setAttribute("lang", "java");
+    }
+    isJavaCodeVisible = !isJavaCodeVisible;
+  }
+</script>
