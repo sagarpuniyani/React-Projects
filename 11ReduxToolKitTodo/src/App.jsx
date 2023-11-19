@@ -8,6 +8,7 @@ function App() {
     <>
     <h3> Redux Tool Kit </h3>
     <AddTodo />
+    {}
     <Todos />
     </>
 
